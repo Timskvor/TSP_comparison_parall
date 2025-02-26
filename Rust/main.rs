@@ -123,7 +123,6 @@ fn three_opt(points: &[Point], path: &mut Vec<usize>) {
                 let mut local_best = (0.0, 0, 0, 0, 0);
                 for j in (i+2)..(current_len-3) {
                     for k in (j+2)..(current_len-1) {
-                        // Calculate original distance
                         let a = points[path[i]];
                         let b = points[path[i+1]];
                         let c = points[path[j]];
@@ -182,7 +181,6 @@ fn three_opt(points: &[Point], path: &mut Vec<usize>) {
                 _ => unreachable!()
             }
 
-            // Verify new path integrity before replacement
             if new_path.len() == path.len() {
                 *path = new_path;
                 improved = true;
@@ -195,7 +193,7 @@ fn process_file(filename: &str, file_index: usize) {
     let points = read_tsp_file(filename);
     let start_nn = std::time::Instant::now();
     let mut path = nearest_neighbor(&points);
-    let _end_nn = start_nn.elapsed().as_secs_f64(); // Add underscore prefix
+    let _end_nn = start_nn.elapsed().as_secs_f64();
     let start_2opt = std::time::Instant::now();
     two_opt(&points, &mut path);
     let end_2opt = start_2opt.elapsed().as_secs_f64();
