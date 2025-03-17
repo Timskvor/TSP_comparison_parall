@@ -1,13 +1,13 @@
 # TSP Algorithm Performance Comparison
 
-    ## Overview
-    This document compares 2-opt and 3-opt implementations in Rust, C++, and Python.
+## Overview
+This document compares 2-opt and 3-opt implementations in Rust, C++, and Python.
 
-    ## Results Summary
-    ![Time Comparisons](time_comparisons.png)
-    ![Length Comparisons](length_comparisons.png)
+## Results Summary
+![Time Comparisons](time_comparisons.png)
+![Length Comparisons](length_comparisons.png)
 
-    ## Detailed Results
+## Detailed Results
 | File | Rust (2opt) | C++ (2opt) | Python (2opt) | Rust (3opt) | C++ (3opt) | Python (3opt) |
 |------|------------|------------|---------------|------------|------------|---------------|
 | tsp_5_1 | 4.00 / 0.0002s | 4.00 / 0.0005s | 4.00 / 0.3599s | 4.00 / 0.0000s | - / - | 4.00 / 1.2674s | 
